@@ -1,0 +1,128 @@
+g++ cf.cpp 
+./a.out
+gedit cf.cpp
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+g++ -g cf.cpp
+gdb ./a.out
+g++ -g cf.cpp
+gdb ./a.out
+g++ -g cf.cpp
+gdb ./a.out
+gedit cf.cpp
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+./a.out
+./a.out
+gedit cf.cpp
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+gedit cf.cpp
+gedit cf.cpp
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+./a.out
+g++ cf.cpp 
+./a.out
+gedit cf.cpp
+python
+g++ cf.cpp 
+./a.out 
+gedit cf.cpp 
+./a.out 
+./a.out 
+./a.out 
+g++ cf.cpp 
+./a.out
+gedit cf.cpp
+python
+g++ cf.cpp 
+python
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+gedit cf.cpp
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+gedit cf.cpp
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+g++ cf.cpp 
+gedit cf.cpp
+gedit cf.cpp
+g++ cf.cpp 
+./a.out
+gedit cf.cpp
+g++ cf.cpp 
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+g++ cf.cpp 
+./a.out
+gedit cf.cpp

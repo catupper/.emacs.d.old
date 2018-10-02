@@ -1,0 +1,16 @@
+;;; ファイル名.el --- パッケージ概要
+
+;; Copyright (C) 2013 by 名前
+
+;; Author: 名前 <メールアドレス>
+;; URL: リポジトリの URL等
+;; Version: 0.01
+;; Package-Requires: ((依存パッケージ1) (依存パッケージ2))
+
+;; ライセンス
+
+;;; Code:
+
+(provide 'パッケージ名)
+
+;;; ファイル名.el ends here
