@@ -8,6 +8,8 @@
 (add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;; Orgを追加
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+;; gtagsを追加
+(add-to-list 'load-path "/usr/local/share/gtags")
 ;; 初期化
 (package-initialize)
 
@@ -23,7 +25,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
+    (markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -31,7 +33,18 @@
  ;; If there is more than one, they won't work right.
  )
 
+;;gtags
+(autoload 'gtags-mode "gtags" "" t)
+(setq gtags-mode-hook
+    '(lambda ()
+        (local-set-key "\M-t" 'gtags-find-tag)    ;関数へジャンプ
+        (local-set-key "\M-r" 'gtags-find-rtag)   ;関数の参照元へジャンプ
+        (local-set-key "\M-s" 'gtags-find-symbol) ;変数の定義元/参照先へジャンプ
+        (local-set-key "\C-t" 'gtags-pop-stack)   ;前のバッファに戻る
+        ))
 
+(add-hook 'c-mode-hook 'gtags-mode)
+(add-hook 'c++-mode-hook 'gtags-mode)
 
 ;;yasnippet
 (require 'yasnippet)
@@ -187,8 +200,28 @@
 (add-hook 'python-mode-hook                                                                                                                                                                                                                   
           '(lambda ()                                                                                                                                                                                                                         
              (hs-minor-mode 1)))                                                                                                                                                                                                              
-(add-hook 'ruby-mode-hook                                                                                                                                                                                                                     
-          '(lambda ()                                                                                                                                                                                                                         
-             (hs-minor-mode 1)))                                                                                                                                                                                                              
+(add-hook 'ruby-mode-hook                                                                                                                                   '(lambda ()                                                                                                                                          (hs-minor-mode 1)))                                                                                                                  
+(define-key global-map (kbd "C-\\") 'hs-toggle-hiding)
 
-(define-key global-map (kbd "C-\\") 'hs-toggle-hiding) 
+
+;;protobuf-mode
+(require 'protobuf-mode)
+
+
+;;google-c-style
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
+;; markdown-mode
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(package-initialize)
+
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))

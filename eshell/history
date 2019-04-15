@@ -1,128 +1,128 @@
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-g++ -g cf.cpp
-gdb ./a.out
-g++ -g cf.cpp
-gdb ./a.out
-g++ -g cf.cpp
-gdb ./a.out
-gedit cf.cpp
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-./a.out
-./a.out
-gedit cf.cpp
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
-gedit cf.cpp
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-./a.out
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
-python
-g++ cf.cpp 
-./a.out 
-gedit cf.cpp 
-./a.out 
-./a.out 
-./a.out 
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
-python
-g++ cf.cpp 
-python
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-g++ cf.cpp 
-gedit cf.cpp
-gedit cf.cpp
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
-g++ cf.cpp 
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-g++ cf.cpp 
-./a.out
-gedit cf.cpp
+make 
+make 
+make 
+make 
+make 
+/home/ogura/Documents/kirchhoff-checker/src/lib/material_flow.cpp:102:26: error: use of undeclared
+make 
+make 
+make 
+make 
+make
+make
+make
+make
+make
+make
+make
+make
+make
+      ^
+make
+      ^
+make
+make
+make
+make
+make
+make
+make
+make
+make
+make
+make
+make
+make
+cd ..
+ls
+cd src/
+ls
+g++ main.cpp lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+cd ..
+cd build/
+make 
+make  -v
+make 
+make 
+make 
+make 
+make 
+make 
+make 
+make 
+make 
+cd ..
+cd src/
+ls
+g++ main.cpp lib/material_flow.cpp -v
+	compiled by GNU C version 8.2.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.20-GMP
+g++ main.cpp lib/material_flow.cpp
+g++ main.cpp lib/material_flow.cpp
+g++ main.cpp lib/material_flow.cpp
+g++ main.cpp lib/material_flow.cpp
+g++ main.cpp lib/material_flow.cpp
+g++ lib/material_flow.cpp main.cpp
+clear
+
+
+
+g++ lib/material_flow.cpp main.cpp
+g++ lib/material_flow.cpp main.cpp
+g++ lib/material_flow.cpp main.cpp
+g++ lib/material_flow.cpp main.cpp
+g++ main.cpp lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+g++  lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+g++ main.cpp lib/material_flow.cpp 
+g++  lib/material_flow.cpp 
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+g++  lib/material_flow.cpp main.cpp
+./a.out ../test/inputs/sample1.txt 
+cd ..
+cd build/
+make 
+ls
+./kirchhoff-checker ../test/inputs/sample1.txt cmake_install.cmake
+./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+make 
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+make 
+./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+make 
+make 
+./kirchhoff-checker ../test/inputs/sample1.txt
