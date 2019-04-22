@@ -11,7 +11,7 @@
 ;; gtagsを追加
 (add-to-list 'load-path "/usr/local/share/gtags")
 ;; 初期化
-(package-initialize)
+;;(package-initialize)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -23,15 +23,32 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(flycheck-display-errors-delay 0.5)
+ '(flycheck-display-errors-function
+   (lambda
+     (errors)
+     (let
+         ((messages
+           (mapcar
+            (function flycheck-error-message)
+            errors)))
+       (popup-tip
+        (mapconcat
+         (quote identity)
+         messages "
+")))))
+ '(irony-additional-clang-options (quote ("-std=c++17")))
  '(package-selected-packages
    (quote
-    (markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
+    (flycheck-pos-tip flycheck-popup-tip flycheck-irony flycheck markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(require 'popup)
 
 ;;gtags
 (autoload 'gtags-mode "gtags" "" t)
@@ -183,7 +200,7 @@
 
 
 ;;hs-minor-mode
-(add-hook 'c++-mode-hook                                                                                                                                                                                                          '(lambda ()                                                                                                                                                                                                                         
+(add-hook 'c++-mode-hook                                                                                                                                                                                                      '(lambda ()                                                                                                                                                                                                                         
              (hs-minor-mode 1)))                                                                                                                                                                                                              
 (add-hook 'c-mode-hook                                                                                                                                                                                                                        
           '(lambda ()                                                                                                                                                                                                                         
@@ -218,10 +235,44 @@
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
 
-(use-package markdown-mode
-  :ensure t
-  :commands (markdown-mode gfm-mode)
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
+
+;;irony-mode
+(eval-after-load "irony"
+  '(progn
+     (custom-set-variables '(irony-additional-clang-options '("-std=c++17")))
+     (add-to-list 'company-backends 'company-irony)
+     (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+     (add-hook 'c-mode-common-hook 'irony-mode)))
+
+;;flycheck
+(when (require 'flycheck nil 'noerror)
+  (custom-set-variables
+   ;; エラーをポップアップで表示
+   '(flycheck-display-errors-function
+     (lambda (errors)
+       (let ((messages (mapcar #'flycheck-error-message errors)))
+         (popup-tip (mapconcat 'identity messages "\n")))))
+   '(flycheck-display-errors-delay 0.5))
+  (define-key flycheck-mode-map (kbd "C-M-n") 'flycheck-next-error)
+  (define-key flycheck-mode-map (kbd "C-M-p") 'flycheck-previous-error)
+  (add-hook 'c-mode-common-hook 'flycheck-mode))
+
+;;flycheck-irony
+(eval-after-load "flycheck"
+  '(progn
+     (when (locate-library "flycheck-irony")
+       (flycheck-irony-setup))))
+
+;;C++ style
+(setq-default c-basic-offset 4     ;;基本インデント量4
+              tab-width 4          ;;タブ幅4
+               indent-tabs-mode nil)  ;;インデントをタブでするかスペースでするか
+(add-hook 'c++-mode-hook
+          '(lambda()
+             (c-set-style "stroustrup")
+             (c-set-offset 'innamespace 4)   ; namespace {}の中はインデントしない
+             (c-set-offset 'arglist-close 0) ; 関数の引数リストの閉じ括弧はインデントしない
+             ))
+
+(with-eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))

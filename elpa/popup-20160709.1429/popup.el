@@ -34,7 +34,7 @@
 
 (defconst popup-version "0.5.3")
 
-
+
 
 ;;; Utilities
 
@@ -170,7 +170,7 @@ buffer."
                                            0)
                                        (cadr it))))))))
 
-
+
 
 ;;; Core
 
@@ -864,7 +864,7 @@ Pages up through POPUP."
           (popup-scroll-top popup) scroll-top)
     (popup-draw popup)))
 
-
+
 
 ;;; Popup Incremental Search
 
@@ -1003,7 +1003,7 @@ HELP-DELAY is a delay of displaying helps."
       (if old-cursor-color
           (set-cursor-color old-cursor-color)))))
 
-
+
 
 ;;; Popup Tip
 
@@ -1090,7 +1090,7 @@ PROMPT is a prompt string when reading events during event loop."
     (unless nowait
       (popup-delete tip))))
 
-
+
 
 ;;; Popup Menu
 

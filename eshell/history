@@ -1,128 +1,128 @@
+cmake ..
 make 
-make 
-make 
-make 
-make 
-/home/ogura/Documents/kirchhoff-checker/src/lib/material_flow.cpp:102:26: error: use of undeclared
-make 
-make 
-make 
-make 
-make
-make
-make
-make
-make
-make
-make
-make
-make
-      ^
-make
-      ^
-make
-make
-make
-make
-make
-make
-make
-make
-make
-make
-make
-make
-make
-cd ..
+cat ../test/inputs/sample1.txt | ./kirchhoff-checker 
+./kirchhoff-checker ../test/inputs/sample1.txt 
 ls
-cd src/
+grep "#pragma once" * -r
+grep "#ifdef" * -r
+grep "#pragma once" * -r
+grep "#ifdef" * -r
+grep "#pragma once" * -r
+grep "#pragma once" * -r
 ls
-g++ main.cpp lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-cd ..
 cd build/
+cmake ..
 make 
-make  -v
-make 
-make 
-make 
-make 
-make 
-make 
-make 
-make 
-make 
+grep "#ifndef" * -r
 cd ..
+grep "#ifndef" * -r
 cd src/
+grep "#ifndef" * -r
+cd ..
+cd include/
+grep "#ifndef" * -r
+cmake ..
+make 
 ls
-g++ main.cpp lib/material_flow.cpp -v
-	compiled by GNU C version 8.2.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.20-GMP
-g++ main.cpp lib/material_flow.cpp
-g++ main.cpp lib/material_flow.cpp
-g++ main.cpp lib/material_flow.cpp
-g++ main.cpp lib/material_flow.cpp
-g++ main.cpp lib/material_flow.cpp
-g++ lib/material_flow.cpp main.cpp
+cd ..
+ls
+cd include/
+ls
+rm cmake_install.cmake 
+rm Makefile 
+rm CMakeFiles/ -r
+ls
+rm CMakeCache.txt 
+ls
+cd ..
+ls
+cd build/
+cmake ..
+make 
+make 
+make 
 clear
-
-
-
-g++ lib/material_flow.cpp main.cpp
-g++ lib/material_flow.cpp main.cpp
-g++ lib/material_flow.cpp main.cpp
-g++ lib/material_flow.cpp main.cpp
-g++ main.cpp lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-g++  lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-g++ main.cpp lib/material_flow.cpp 
-g++  lib/material_flow.cpp 
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-g++  lib/material_flow.cpp main.cpp
-./a.out ../test/inputs/sample1.txt 
+
+ls
+ctest 
 cd ..
+rm -rf build/
+mkdir build
+cd build/
+cmake ..
+make 
+ctest 
+cd ..
+cd ..
+cd ..
+d build/
 cd build/
 make 
+make 
 ls
-./kirchhoff-checker ../test/inputs/sample1.txt cmake_install.cmake
-./kirchhoff-checker ../test/inputs/sample1.txt
+./kirchhoff-checker ../test/inputs/sample1.txt 
+cp owner_check_test.cpp strawberry_test.cpp
+ls
+cd ..
+ls
+cd inputs/
+ls
+cd ..
+cd ..
+cd bu
+cd. .
+cd bu
+cd ..
+cd build/
+./kirchhoff-checker ../test/inputs/sample1.txt 
 make 
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-make 
-make 
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-make 
-./kirchhoff-checker ../test/inputs/sample1.txt
-make 
-make 
-./kirchhoff-checker ../test/inputs/sample1.txt
-make 
-./kirchhoff-checker ../test/inputs/sample1.txt
-make 
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
-./kirchhoff-checker ../test/inputs/sample1.txt
+expanded from macro 'INTERNAL_CATCH_TEST'
+cmake ..
 make 
 make 
+ctest 
+ls
+cd build/
+ls
+cmake ..
 make 
-./kirchhoff-checker ../test/inputs/sample1.txt
+make 
+make 
+make 
+make 
+make 
+make 
+make 
+make 
+caddi::kirchhoff_checker::owner_condition_type &, const
+make 
+make 
+make 
+make 
+ls
+clear
+
+ls
+ctest 
+ls
+cd ..
+cd kirchhoff_checker/
+ls
+emacs -nw onwer_condition_informations.cpp
+mv owner_condition_informations.cpp ../../../src/caddi/kirchhoff_checker/.
+ls
+rm *~
+ls
+cd ..
+cd ..
+cd ..
+cd build/
+cmake ..
+make 
+make 
+make 
+ls
+cd sr
+make 
+g++ -std=c++17 hoge.cpp 
+./a.out 
