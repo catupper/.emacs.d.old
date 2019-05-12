@@ -1,128 +1,128 @@
-cmake ..
-make 
-cat ../test/inputs/sample1.txt | ./kirchhoff-checker 
-./kirchhoff-checker ../test/inputs/sample1.txt 
-ls
-grep "#pragma once" * -r
-grep "#ifdef" * -r
-grep "#pragma once" * -r
-grep "#ifdef" * -r
-grep "#pragma once" * -r
-grep "#pragma once" * -r
-ls
-cd build/
-cmake ..
-make 
-grep "#ifndef" * -r
-cd ..
-grep "#ifndef" * -r
-cd src/
-grep "#ifndef" * -r
-cd ..
-cd include/
-grep "#ifndef" * -r
-cmake ..
-make 
-ls
-cd ..
-ls
-cd include/
-ls
-rm cmake_install.cmake 
-rm Makefile 
-rm CMakeFiles/ -r
-ls
-rm CMakeCache.txt 
-ls
-cd ..
-ls
-cd build/
-cmake ..
-make 
-make 
-make 
-clear
-
-ls
-ctest 
-cd ..
-rm -rf build/
-mkdir build
-cd build/
-cmake ..
-make 
-ctest 
-cd ..
-cd ..
-cd ..
-d build/
-cd build/
-make 
-make 
-ls
-./kirchhoff-checker ../test/inputs/sample1.txt 
-cp owner_check_test.cpp strawberry_test.cpp
-ls
-cd ..
-ls
-cd inputs/
-ls
-cd ..
-cd ..
-cd bu
-cd. .
-cd bu
-cd ..
-cd build/
-./kirchhoff-checker ../test/inputs/sample1.txt 
-make 
-expanded from macro 'INTERNAL_CATCH_TEST'
-cmake ..
-make 
-make 
-ctest 
-ls
-cd build/
-ls
-cmake ..
-make 
-make 
-make 
-make 
-make 
-make 
-make 
-make 
-make 
-caddi::kirchhoff_checker::owner_condition_type &, const
-make 
-make 
-make 
-make 
-ls
-clear
-
-ls
-ctest 
-ls
-cd ..
-cd kirchhoff_checker/
-ls
-emacs -nw onwer_condition_informations.cpp
-mv owner_condition_informations.cpp ../../../src/caddi/kirchhoff_checker/.
-ls
-rm *~
-ls
-cd ..
-cd ..
-cd ..
-cd build/
-cmake ..
-make 
-make 
-make 
-ls
-cd sr
-make 
-g++ -std=c++17 hoge.cpp 
+g++ E.cpp -std=c++14
 ./a.out 
+open E.cpp 
+g++ E.cpp -std=c++14
+./a.out 
+open E.cpp 
+g++ E.cpp -std=c++14
+g++ E.cpp -std=c++14
+g++ E.cpp -std=c++14
+open E.cpp 
+./a.out 
+g++ hoge.cpp 
+g++ hoge.cpp 
+./a.out
+g++ hoge.cpp 
+g++ hoge.cpp -std=c++14
+g++ hoge.cpp -std=c++14
+g++ hoge.cpp -std=c++14
+./a.out
+./a.out
+./a.out
+g++ B.cpp 
+./a.out 
+./a.out 
+g++ B.cpp 
+./a.out 
+g++ B.cpp 
+./a.out 
+g++ B.cpp 
+./a.out 
+./a.out 
+g++ B.cpp 
+g++ B.cpp 
+./a.out 
+./a.out 
+./a.out 
+./a.out 
+g++ B.cpp 
+./a.out 
+g++ B.cpp 
+./a.out 
+g++ C.cpp 
+g++ C.cpp 
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp  -std=c++14
+./a.out
+./a.out
+g++ C.cpp  -std=c++14
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp  -std=c++14
+./a.out
+g++ D.cpp 
+./a.out
+./a.out
+./a.out
+g++ D.cpp 
+g++ C.
+g++ C.cpp
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp  -std=c++14
+./a.out
+g++ C.cpp 
+g++ C.cpp -std=c++14
+g++ B.cpp 
+./a.out 
+g++ B.cpp 
+./a.out 
+g++ B.cpp 
+./a.out 
+10 6
+./a.out 
+./a.out 
+./a.out 
+g++ D.cpp 
+g++ D.cpp -std=c++4
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+^
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+./a.out 
+./a.out 
+3
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+./a.out 
+./a.out 
+g++ D.cpp -std=c++14
+./a.out 
+g++ D.cpp -std=c++14
+./a.out 
+g++ D.cpp -std=c++14
+g++ D.cpp -std=c++14
+./a.out 
+g++ D.cpp -std=c++14
+./a.out 
+./a.out 
+gedit 6
+1 0
+0 1
+0 2
+-1 0
+-1 -1
+2 1
+RLLR
+~6
+~61 00 10 2-1 0-1 -12 1RLLR
+g++ -std=c++14 D.cpp 
+      Vec *]
+g++ -std=c++14 D.cpp 
+In file included from D.cpp:1:
+g++ -std=c++14 D.cpp 
+exit
