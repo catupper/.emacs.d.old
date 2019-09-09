@@ -167,9 +167,9 @@ The explaination comes from 'rustc --explain=ID'."
 	  lsp-rust--handlers)
   (lsp-provide-marked-string-renderer client "rust" #'lsp-rust--render-string))
 
-(lsp-define-stdio-client lsp-rust "rust" #'lsp-rust--get-root nil
-			 :command-fn #'lsp-rust--rls-command
-			 :initialize #'lsp-rust--initialize-client)
+;(lsp-define-stdio-client lsp-rust "rust" #'lsp-rust--get-root nil
+;			 :command-fn #'lsp-rust--rls-command
+;			 :initialize #'lsp-rust--initialize-client)
 
 (defun lsp-rust--set-configuration ()
   (lsp--set-configuration `(:rust ,lsp-rust--config-options)))

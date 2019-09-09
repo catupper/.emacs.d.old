@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "lsp-rust" "lsp-rust.el" (0 0 0 0))
 ;;; Generated autoloads from lsp-rust.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lsp-rust" '("lsp-rust-")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lsp-rust" '(#("lsp-rust-" 0 9 (fontified nil)))))
 
 ;;;***
 
