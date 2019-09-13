@@ -1,16 +1,3 @@
-g++ E.cpp -std=c++14
-./a.out 
-open E.cpp 
-g++ E.cpp -std=c++14
-./a.out 
-open E.cpp 
-g++ E.cpp -std=c++14
-g++ E.cpp -std=c++14
-g++ E.cpp -std=c++14
-open E.cpp 
-./a.out 
-g++ hoge.cpp 
-g++ hoge.cpp 
 ./a.out
 g++ hoge.cpp 
 g++ hoge.cpp -std=c++14
@@ -126,3 +113,16 @@ g++ -std=c++14 D.cpp
 In file included from D.cpp:1:
 g++ -std=c++14 D.cpp 
 exit
+g++
+clang
+clang++
+cd
+cd .emacs.d/
+git submodule update --init
+exit
+$CMAKE_MODULE_PATH
+echo $CMAKE_MODULE_PATH
+git status
+git diff schema.rs 
+git add schema.rs 
+git commit -m "add field to schema"

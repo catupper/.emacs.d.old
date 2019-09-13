@@ -40,7 +40,7 @@
  '(irony-additional-clang-options (quote ("-std=c++17")))
  '(package-selected-packages
    (quote
-    (eglot use-package all-the-icons recentf-ext lsp-rust flycheck-rust rustic rust-mode flycheck-pos-tip flycheck-popup-tip flycheck-irony flycheck markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
+    (yaml-mode eglot use-package all-the-icons recentf-ext lsp-rust flycheck-rust rustic rust-mode flycheck-pos-tip flycheck-popup-tip flycheck-irony flycheck markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
