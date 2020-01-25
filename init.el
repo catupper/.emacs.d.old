@@ -40,7 +40,7 @@
  '(irony-additional-clang-options (quote ("-std=c++17")))
  '(package-selected-packages
    (quote
-    (yaml-mode eglot use-package all-the-icons recentf-ext lsp-rust flycheck-rust rustic rust-mode flycheck-pos-tip flycheck-popup-tip flycheck-irony flycheck markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
+    (racer yaml-mode eglot use-package all-the-icons recentf-ext lsp-rust flycheck-rust rustic rust-mode flycheck-pos-tip flycheck-popup-tip flycheck-irony flycheck markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -280,5 +280,39 @@
 
 (setq rustic-rls-pkg 'eglot)
 
+;;rustmode
+(use-package rust-mode)
 ;;rustic
 (use-package rustic)
+
+
+
+; これも昔どこかからコピペして使っている秘伝のタレ・・・
+(setq flymake-allowed-file-name-masks '())
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+(when (load "flymake" t)
+  (defun flymake-pyflakes-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list "ほげほげ/bin/pyflakesの絶対パスを書く"  (list local-file))))
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pyflakes-init)))
+; show message on mini-buffer
+(defun flymake-show-help ()
+  (when (get-char-property (point) 'flymake-overlay)
+    (let ((help (get-char-property (point) 'help-echo)))
+      (if help (message "%s" help)))))
+(add-hook 'post-command-hook 'flymake-show-help)
+
+; デフォルトだと赤波線になって見づらかったんで直した
+; 参考：https://suer.hatenablog.com/entry/20090307/1236403449
+(custom-set-faces
+  '(flymake-errline 
+     ((((class color)) 
+       (:foreground "red" :bold t :underline t))))
+  '(flymake-warnline 
+     ((((class color)) 
+       (:foreground "red" :bold t :underline t))))); :background "white")))))
