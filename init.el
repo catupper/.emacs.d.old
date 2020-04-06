@@ -40,13 +40,14 @@
  '(irony-additional-clang-options (quote ("-std=c++17")))
  '(package-selected-packages
    (quote
-    (racer yaml-mode eglot use-package all-the-icons recentf-ext lsp-rust flycheck-rust rustic rust-mode flycheck-pos-tip flycheck-popup-tip flycheck-irony flycheck markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
+    (dracula-theme racer yaml-mode eglot use-package all-the-icons recentf-ext lsp-rust flycheck-rust rustic rust-mode flycheck-pos-tip flycheck-popup-tip flycheck-irony flycheck markdown-mode google-c-style haskell-mode protobuf-mode company-jedi company-php php-mode dumb-jump company counsel yasnippet neotree magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(flymake-error ((((class color)) (:foreground "red" :bold t :underline t))))
+ '(flymake-warning ((((class color)) (:foreground "red" :bold t :underline t)))))
 
 (require 'popup)
 
@@ -297,7 +298,7 @@
            (local-file (file-relative-name
                         temp-file
                         (file-name-directory buffer-file-name))))
-      (list "ほげほげ/bin/pyflakesの絶対パスを書く"  (list local-file))))
+      (list "/home/catupper/anaconda3/bin/pyflakes"  (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
 ; show message on mini-buffer
@@ -309,10 +310,16 @@
 
 ; デフォルトだと赤波線になって見づらかったんで直した
 ; 参考：https://suer.hatenablog.com/entry/20090307/1236403449
-(custom-set-faces
-  '(flymake-errline 
-     ((((class color)) 
-       (:foreground "red" :bold t :underline t))))
-  '(flymake-warnline 
-     ((((class color)) 
-       (:foreground "red" :bold t :underline t))))); :background "white")))))
+; :background "white")))))
+
+(load-theme 'dracula t)
+
+;; display line numbers
+(if (version<= "26.0.50" emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      ;; テーマはdeeper-blueを使用している。これに合わせた色を選んだつもり
+      (set-face-attribute 'line-number nil
+                          :foreground "gray")
+      (set-face-attribute 'line-number-current-line nil
+                          :foreground "red")))
